@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(require('./app/middlewares/toCamel'));
-app.use(require('./app/middlewares/mung'));
+app.use(require('./app/middlewares/toSnake'));
 
 const User = require('./app/routes/user');
 
