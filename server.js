@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGOURL,
-  { useNewUrlParser: true, useUnifiedTopology: true });
+  { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.get('/', (req, res) => {
   res.send('Welcome to my application.');
